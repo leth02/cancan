@@ -4,7 +4,14 @@ https://leetcode.com/problems/find-median-from-data-stream/description/
 This is a brute force approach.
 For each insertion, use binary search to find the place to insert the number in a way that maintain sorted order of the array.
 For each median lookup, simply return the middle element of the array as the array has always been sorted.
+
+Time complexity: O(n) + O(logn) ~= O(n)
+- O(logn) to find the correct position to insert the number
+- O(n) to shift all elements to insert the number
+
+Space: O(n) to store numbers in a container
 */
+
 class MedianFinder {
   var numbers = [Int]()
 
